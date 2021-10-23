@@ -4,6 +4,16 @@ export interface LoginResponse {
     token:   string;
 }
 
+export interface renoveJWT {
+    usuario: Usuario;
+    token:   string;
+}
+
+export interface RegisterResponse {
+    usuario: Usuario;
+    token:   string;
+}
+
 export interface Usuario {
     rol:    string;
     estado: boolean;
@@ -17,4 +27,10 @@ export interface Usuario {
 export interface LoginData {
     correo:  string;
     password:string;
+}
+
+export interface RegisterData {
+    correo:  string;
+    password:string;
+    nombre:  string;
 }
