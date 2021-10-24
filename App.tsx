@@ -1,14 +1,17 @@
 import 'react-native-gesture-handler';
-import * as React from 'react';
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import Navigator from './src/navigator/Navigator';
 import { AuthProvider } from './src/context/AuthContext';
+import { ProductsProvider } from './src/context/ProductsContext';
 
 const AppState = ({ children }: any) => {
 
   return (
     <AuthProvider>
-      { children }
+      <ProductsProvider>
+        { children }
+      </ProductsProvider>
     </AuthProvider>
   )
 
