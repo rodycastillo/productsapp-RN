@@ -49,7 +49,18 @@ export interface Producto {
     img?:      string;
 }
 
+export interface CategoriesResponse {
+    total:      number;
+    categorias: Categoria[];
+}
+
 export interface Categoria {
+    _id:     string;
+    nombre:  string;
+    usuario?: CreateFor;
+}
+
+export interface CreateFor {
     _id:    string;
     nombre: string;
 }
